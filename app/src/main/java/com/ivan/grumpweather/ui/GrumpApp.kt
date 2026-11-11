@@ -465,7 +465,7 @@ private fun dayName(date: String, index: Int): String {
     }
 }
 
-private fun fmtTemp(t: Double): String {
+internal fun fmtTemp(t: Double): String {
     val r = t.roundToInt()
     return when {
         r > 0 -> "+$r°"

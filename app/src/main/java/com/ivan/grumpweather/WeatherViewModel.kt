@@ -14,6 +14,7 @@ import com.ivan.grumpweather.data.Prefs
 import com.ivan.grumpweather.data.WeatherApi
 import com.ivan.grumpweather.grumpy.Grumpy
 import com.ivan.grumpweather.grumpy.Mood
+import com.ivan.grumpweather.widget.GrumpWidget
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -114,6 +115,7 @@ class WeatherViewModel(app: Application) : AndroidViewModel(app) {
             )
             seed = Random.nextInt()
             state = UiState.Ready(p, f, mood)
+            runCatching { GrumpWidget.push(getApplication<Application>(), p, f) }
         } catch (e: CancellationException) {
             throw e
         } catch (e: Exception) {
