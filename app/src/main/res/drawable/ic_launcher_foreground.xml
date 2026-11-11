@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ворчливая тучка: насупленные брови, кислая мина, капает дождь -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- облако -->
+    <path android:fillColor="#E8ECF4"
+        android:pathData="M29,60 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0" />
+    <path android:fillColor="#E8ECF4"
+        android:pathData="M41,52 a17,17 0 1,0 34,0 a17,17 0 1,0 -34,0" />
+    <path android:fillColor="#E8ECF4"
+        android:pathData="M63,62 a11,11 0 1,0 22,0 a11,11 0 1,0 -22,0" />
+    <path android:fillColor="#E8ECF4"
+        android:pathData="M42,58 L74,58 L74,73 L42,73 Z" />
+
+    <!-- глаза -->
+    <path android:fillColor="#2E3448"
+        android:pathData="M48.5,59 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0" />
+    <path android:fillColor="#2E3448"
+        android:pathData="M61.5,59 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0" />
+
+    <!-- злые брови -->
+    <path android:strokeColor="#2E3448" android:strokeWidth="2.6"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M45,51 L55,55" />
+    <path android:strokeColor="#2E3448" android:strokeWidth="2.6"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M70,51 L60,55" />
+
+    <!-- кислая мина -->
+    <path android:strokeColor="#2E3448" android:strokeWidth="2.6"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M51,68 Q57.5,63 64,68" />
+
+    <!-- капли -->
+    <path android:strokeColor="#6FB3FF" android:strokeWidth="2.6"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M42,78 L39,85" />
+    <path android:strokeColor="#6FB3FF" android:strokeWidth="2.6"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M57,78 L54,85" />
+    <path android:strokeColor="#6FB3FF" android:strokeWidth="2.6"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M72,78 L69,85" />
+</vector>
