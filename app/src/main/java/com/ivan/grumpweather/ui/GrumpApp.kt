@@ -273,6 +273,35 @@ private fun ReadyView(
             StatCard("Осадки", "${fmt1(c.precipitation)} мм", Modifier.weight(1f))
         }
 
+        val days = s.forecast.days
+        if (days.size >= 2) {
+            val tomorrowText = remember(seed, days) {
+                val t = days[0]
+                val n = days[1]
+                Grumpy.tomorrowLine(
+                    todayMax = t.tMax, todayProb = t.precipProb,
+                    tmrMax = n.tMax, tmrProb = n.precipProb, tmrCode = n.code, tmrWind = n.windMax,
+                    rnd = Random(seed + 13),
+                )
+            }
+            Spacer(Modifier.height(10.dp))
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(18.dp))
+                    .background(CardBg)
+                    .padding(14.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(Grumpy.emoji(days[1].code, true), fontSize = 28.sp)
+                Spacer(Modifier.width(12.dp))
+                Column {
+                    Text("А завтра", color = Dim, fontSize = 13.sp)
+                    Text(tomorrowText, color = Ink, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+                }
+            }
+        }
+
         SectionTitle("Ближайшие сутки")
         LazyRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             items(s.forecast.hours) { h -> HourCard(h) }
